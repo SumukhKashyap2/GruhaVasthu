@@ -2,18 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ================= GLOBAL ================= */
+
 body {
-  @apply bg-gray-50 text-gray-800 antialiased font-sans;
+  @apply bg-gradient-to-br from-orange-50 via-white to-blue-100
+         text-gray-800 antialiased font-sans leading-relaxed;
 }
 
-/* Only one keyframes and one class! */
+/* ================= TYPOGRAPHY ================= */
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold text-blue-900;
+}
+
+p {
+  @apply text-base text-gray-700;
+}
+
+a {
+  @apply text-blue-700 hover:text-blue-900 transition-colors duration-200;
+}
+
+/* ================= ANIMATIONS ================= */
+
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
 .animate-marquee {
   display: flex;
   width: max-content;
   animation: marquee 30s linear infinite;
   will-change: transform;
 }
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease both;
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7d2fe;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #60a5fa;
+}
+
+/* ================= UTILITIES ================= */
+
+.card-bg {
+  @apply bg-white/80 backdrop-blur-lg shadow-lg border border-blue-100 rounded-2xl;
+}
+
+.shadow-xl {
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+
+/* ================= HERO IMAGE MASK ================= */
+
+.hero-image-mask {
+  position: relative;
+  padding: 48px;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,1) 55%,
+    rgba(255,255,255,0.85) 70%,
+    rgba(255,255,255,0) 100%
+  );
+}
+
