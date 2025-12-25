@@ -1,5 +1,4 @@
 # Construction Company Website
-# Construction Company Website
 ## Getting Started
 Follow these steps to set up and run the application:
 
@@ -11,3 +10,4 @@ cd frontend
 yarn install
 
 # Start the development server
+yarn dev
