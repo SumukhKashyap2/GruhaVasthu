@@ -1,8 +1,8 @@
 import { useParams, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const projectDetails = {
-  1: {
+  3: {
     title: "Saaligraama",
     images: [
       "/images/Konankunte/Konankunte_elevation.png",
@@ -14,7 +14,7 @@ const projectDetails = {
       "/images/Konankunte/KHall3.png",
     ]
   },
-  2: {
+  4: {
     title: "Kondenahalli",
     images: [
       "/images/Kondenahalli/KondenahalliElevation.jpg",
@@ -22,8 +22,8 @@ const projectDetails = {
       "/images/Kondenahalli/KondenahalliRoof.jpeg",
     ]
   },
-  3: {
-    title: "Ocean View",
+  1: {
+    title: "RBI",
     images: [
       "/images/rbi/RBI_ELEVATION.png",
       "/images/rbi/RBI_Building_outside.png",
@@ -37,11 +37,42 @@ const projectDetails = {
       "/images/rbi/RBI_Poojaroom1.png",
     ]
   },
-  4: {
-    title: "Mountain Retreat",
+  2: {
+    title: "Rajajinagara",
     images: [
-      "/images/mountainretreat1.jpg",
-      "/images/mountainretreat2.jpg"
+      "/images/Rajajinagara/Elevation.jpeg",
+      "/images/Rajajinagara/Final_outcome2.png",
+      "/images/Rajajinagara/entrance.JPG",
+      "/images/Rajajinagara/IMG_8973.JPG",
+      "/images/Rajajinagara/Hall.JPG",
+      "/images/Rajajinagara/Kitchen1.JPG",
+      "/images/Rajajinagara/Kitchen2.JPG",
+      "/images/Rajajinagara/IMG_8979.JPG",
+      "/images/Rajajinagara/IMG_8980.JPG",
+      "/images/Rajajinagara/Room1.JPG",
+      "/images/Rajajinagara/IMG_9004.JPG",
+      "/images/Rajajinagara/IMG_9001.JPG",
+      "/images/Rajajinagara/IMG_9015.JPG",
+      "/images/Rajajinagara/IMG_9017.JPG",
+      "/images/Rajajinagara/IMG_9019.JPG",
+      "/images/Rajajinagara/IMG_9027.JPG",
+      "/images/Rajajinagara/IMG_9033.JPG",
+      "/images/Rajajinagara/IMG_9035.JPG",
+      "/images/Rajajinagara/IMG_9036.JPG",
+      "/images/Rajajinagara/IMG_9041.JPG",
+      "/images/Rajajinagara/IMG_9042.JPG",
+      "/images/Rajajinagara/IMG_9046.JPG",
+      "/images/Rajajinagara/IMG_9048.JPG",
+      "/images/Rajajinagara/IMG_9049.JPG",
+      "/images/Rajajinagara/IMG_9051.JPG",
+      "/images/Rajajinagara/IMG_9052.JPG",
+      "/images/Rajajinagara/IMG_9058.JPG",
+      "/images/Rajajinagara/IMG_9063.JPG",
+      "/images/Rajajinagara/IMG_9065.JPG",
+      "/images/Rajajinagara/IMG_9079.JPG",
+      "/images/Rajajinagara/IMG_9088.JPG",
+      "/images/Rajajinagara/IMG_9090.JPG",
+      "/images/Rajajinagara/IMG_9119.JPG"
     ]
   }
 };
@@ -50,6 +81,30 @@ export default function ProjectPhotos() {
   const { id } = useParams();
   const project = projectDetails[id];
   const [modalImg, setModalImg] = useState(null);
+// Find the index of the current modal image
+  const currentIndex = modalImg ? project?.images.indexOf(modalImg) : -1;
+
+  // Keyboard navigation for modal
+  useEffect(() => {
+    if (!modalImg) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setModalImg(null);
+      } else if (e.key === "ArrowRight") {
+        if (currentIndex < project.images.length - 1) {
+          setModalImg(project.images[currentIndex + 1]);
+        }
+      } else if (e.key === "ArrowLeft") {
+        if (currentIndex > 0) {
+          setModalImg(project.images[currentIndex - 1]);
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [modalImg, currentIndex, project?.images]);
 
   if (!project) {
     return (
@@ -72,7 +127,7 @@ export default function ProjectPhotos() {
           </Link>
         </div>
 
-       {/* Gallery */}
+        {/* Gallery */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           {project.images.map((img, i) => (
             <img
@@ -85,18 +140,44 @@ export default function ProjectPhotos() {
           ))}
         </div>
       </div>
-            {/* Modal */}
+      {/* Modal */}
       {modalImg && (
         <div
           className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
           onClick={() => setModalImg(null)}
         >
+          {/* Left Arrow */}
+          {currentIndex > 0 && (
+            <button
+              className="absolute left-8 text-white text-4xl font-bold bg-black/50 rounded-full px-4 py-2 hover:bg-black/80 transition"
+              onClick={e => {
+                e.stopPropagation();
+                setModalImg(project.images[currentIndex - 1]);
+              }}
+              aria-label="Previous"
+            >
+              &#8592;
+            </button>
+          )}
           <img
             src={modalImg}
             alt="Full Project"
             className="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl border-4 border-white"
             onClick={e => e.stopPropagation()}
           />
+          {/* Right Arrow */}
+          {currentIndex < project.images.length - 1 && (
+            <button
+              className="absolute right-8 text-white text-4xl font-bold bg-black/50 rounded-full px-4 py-2 hover:bg-black/80 transition"
+              onClick={e => {
+                e.stopPropagation();
+                setModalImg(project.images[currentIndex + 1]);
+              }}
+              aria-label="Next"
+            >
+              &#8594;
+            </button>
+          )}
           <button
             className="absolute top-8 right-8 text-white text-3xl font-bold bg-black/50 rounded-full px-4 py-2 hover:bg-black/80 transition"
             onClick={() => setModalImg(null)}

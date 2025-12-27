@@ -38,7 +38,7 @@ const projectReviews = {
 };
 
 const projectDetails = {
-  1: {
+  3: {
     title: "Saaligraama",
     location: "Konankunte, Bangalore",
     area: "2000 sq.ft.",
@@ -56,7 +56,7 @@ const projectDetails = {
     ],
     videoUrl: "https://www.youtube.com/embed/B9HCH2xKSJc?si=pN2kolxMMaFPF76G"
   },
-  2: {
+  4: {
     title: "Kondenahalli",
     location: "Chikkaballapura",
     area: "2400 sq.ft.",
@@ -74,9 +74,9 @@ const projectDetails = {
     ],
     videoUrl: "https://www.youtube.com/embed/VIDEO_ID"
   },
-  3: {
-    title: "Ocean View",
-    location: "RBI Layout, Bangalore",
+  1: {
+    title: "RBI Layout",
+    location: "Bengaluru",
     area: "1200 sq.ft.",
     type: "Commercial",
     Vasthu: "No",
@@ -93,13 +93,13 @@ const projectDetails = {
     ],
     videoUrl: "https://www.youtube.com/embed/sV3tuGV3P1Y?si=Lh9KCXuvjKmOB6zy"
   },
-  4: {
-    title: "Mountain Retreat",
-    location: "ITI Layout, Bangalore",
+  2: {
+    title: "Rajajinagara",
+    location: "Bengaluru",
     area: "1200 sq.ft.",
     type: "Residential",
     Vasthu: "Yes",
-    overview: "Mountain Retreat is a tranquil residential project in ITI Layout, inspired by nature. The homes offer panoramic views and peaceful surroundings.",
+    overview: "Rajajinagara is a tranquil residential project in ITI Layout, inspired by nature. The homes offer panoramic views and peaceful surroundings.",
     approach: [
       "Designed homes to maximize views and privacy.",
       "Used natural materials for harmony with the environment.",
@@ -107,8 +107,7 @@ const projectDetails = {
     ],
     challenges: "Remote location and logistics. We coordinated closely with suppliers and used prefabricated elements to streamline construction.",
     images: [
-      "/images/mountainretreat1.jpg",
-      "/images/mountainretreat2.jpg"
+      "/images/Rajajinagara/Elevation.jpeg"
     ],
     videoUrl: "https://www.youtube.com/embed/VIDEO_ID"
   }

@@ -26,10 +26,11 @@ import ProjectCard from "../components/ProjectCard";
 import { FaBuilding, FaMapMarkedAlt, FaCheckCircle } from "react-icons/fa";
 
 const projects = [
-  { id: 1, name: "Saaligraama", location: "Konankunte", previewImage: "/images/Konankunte/Konankunte_elevation.png" },
-  { id: 2, name: "Jayanagara", location: "Jayanagara", previewImage: "/images/greenvalley.jpg" },
-  { id: 3, name: "RBI Layout", location: "RBI Layout", previewImage: "/images/rbi/RBI_ELEVATION.png" },
-  { id: 4, name: "ITI Layout", location: "ITI Layout", previewImage: "/images/citylights.jpg" },
+  { id: 1, name: "RBI Layout", location: "RBI Layout", previewImage: "/images/rbi/RBI_ELEVATION.png" },
+  { id: 2, name: "Rajajinagara", location: "Bengaluru", previewImage: "/images/Rajajinagara/Elevation.jpeg" },  
+  { id: 3, name: "Saaligraama", location: "Konankunte", previewImage: "/images/Konankunte/Konankunte_elevation.png" },
+  { id: 4, name: "Kondenahalli", location: "Chikkaballapura", previewImage: "/images/Kondenahalli/KondenahalliElevation.jpg" },
+
 ];
 
 export default function ProjectsPage() {
