@@ -81,7 +81,7 @@ export default function HomePage() {
       <section className="bg-white/80 backdrop-blur-lg py-20">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center px-6">
           <Stat icon={<FaClock />} label="25+ Years Experience" />
-          <Stat icon={<FaHome />} label="120+ Projects Delivered" />
+          <Stat icon={<FaHome />} label="60+ Projects Delivered" />
           <Stat icon={<FaCompass />} label="100% Vasthu Compliance" />
           <Stat icon={<FaHammer />} label="On-Time Delivery" />
         </div>

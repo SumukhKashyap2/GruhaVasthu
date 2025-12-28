@@ -4,17 +4,17 @@ import ProjectDetails from "./pages/ProjectDetails";
 import ContactPage from "./pages/ContactPage";
 import Navbar from "./components/Navbar";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt,FaWhatsapp,FaYoutube} from "react-icons/fa";
+import { FaMapMarkerAlt, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import ScrollToTop from "./components/ScrollToTop"; 
+import ScrollToTop from "./components/ScrollToTop";
 import ProjectsPage from "./pages/ProjectsPage";
-import ProjectPhotos from "./pages/ProjectPhotos"; 
+import ProjectPhotos from "./pages/ProjectPhotos";
+import FunFactBubble from "./components/FunFactBubble";
 
 
 function AnimatedRoutes() {
   const location = useLocation();
   return (
-    // <div className="pt-20 min-h-[calc(100vh-96px)] flex flex-col">
     <div className="pt-20 flex flex-col">
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
@@ -61,7 +61,7 @@ function AnimatedRoutes() {
             }
           />
           <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/projects/:id/photos" element={<ProjectPhotos />} /> 
+          <Route path="/projects/:id/photos" element={<ProjectPhotos />} />
         </Routes>
       </AnimatePresence>
     </div>
@@ -72,7 +72,6 @@ function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200 mt-auto px-4 py-10">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-gray-700">
-        {/* About */}
         <div className="md:col-span-2">
           <h3 className="text-xl font-bold text-blue-900 mb-2">About Gruha Vasthu</h3>
           <p className="text-base mb-4">
@@ -93,7 +92,6 @@ function Footer() {
             </a>
           </div>
         </div>
-        {/* Services */}
         <div>
           <h4 className="text-lg font-semibold text-blue-800 mb-2">Our Services</h4>
           <ul className="space-y-2 text-base">
@@ -105,18 +103,17 @@ function Footer() {
             <li>Interiors</li>
           </ul>
         </div>
-        {/* Location */}
         <div>
           <h4 className="text-lg font-semibold text-blue-800 mb-2">Contact & Location</h4>
           <div className="flex items-start gap-2 mb-2">
             <FaMapMarkerAlt className="text-blue-600 mt-1" />
             <span>
-              Rajajinagara,<br /> 
-              Bengaluru - 560010<br/>
-              Karnataka, India<br/>
+              Rajajinagara,<br />
+              Bengaluru - 560010<br />
+              Karnataka, India
             </span>
           </div>
-          <div className="mt-2 text-base flex flex-col gap-1">
+          <div className="mt-2 flex flex-col gap-1">
             <span className="flex items-center gap-2">
               <FaWhatsapp className="text-green-500" />
               +91 88610 95921
@@ -128,6 +125,7 @@ function Footer() {
           </div>
         </div>
       </div>
+
       <div className="text-center text-gray-500 text-sm mt-8">
         &copy; {new Date().getFullYear()} Gruha Vasthu. All rights reserved.
       </div>
@@ -135,17 +133,27 @@ function Footer() {
   );
 }
 
-function App() {
+function AppLayout() {
+  const location = useLocation();
+
+  const showFunFact =
+    location.pathname === "/projects";
+
   return (
-    <Router>
-      <ScrollToTop /> {/* <-- Add this line right after <Router> */}
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <AnimatedRoutes />
-        <Footer />
-      </div>
-    </Router>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <AnimatedRoutes />
+      {showFunFact && <FunFactBubble />}
+      <Footer />
+    </div>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <AppLayout />
+    </Router>
+  );
+}
