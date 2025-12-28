@@ -1,12 +1,9 @@
 import { FaStar, FaQuoteLeft } from "react-icons/fa";
+// ...existing imports...
 export default function ReviewBanner({ reviews }) {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
-        {/* <h2 className="text-3xl font-extrabold text-center mb-12">
-          What Our Clients Say
-        </h2> */}
-
         <div className="grid md:grid-cols-3 gap-10">
           {reviews.map((r, i) => (
             <div
@@ -17,7 +14,7 @@ export default function ReviewBanner({ reviews }) {
               <p className="italic text-gray-700 mb-6">"{r.text}"</p>
 
               <div className="flex gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
+                {[...Array(r.stars || 5)].map((_, i) => (
                   <FaStar key={i} className="text-yellow-400" />
                 ))}
               </div>
