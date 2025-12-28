@@ -1,5 +1,5 @@
-import { FaStar, FaQuoteLeft } from "react-icons/fa";
-// ...existing imports...
+import { FaStar, FaQuoteLeft, FaEnvelope } from "react-icons/fa";
+
 export default function ReviewBanner({ reviews }) {
   return (
     <section className="py-24 bg-white">
@@ -19,7 +19,18 @@ export default function ReviewBanner({ reviews }) {
                 ))}
               </div>
 
-              <p className="font-bold text-blue-900">{r.client}</p>
+              <div className="flex items-center gap-2">
+                <p className="font-bold text-blue-900">{r.client}</p>
+                {r.email && (
+                <a
+                  href={`mailto:${r.email}`}
+                  rel="noopener noreferrer"
+                  title={`Email ${r.client} to learn about their experience with the project`}
+                >
+                  <FaEnvelope className="text-blue-500 hover:text-blue-700 transition" />
+                </a>
+              )}
+              </div>
               <p className="text-sm text-gray-500">{r.location}</p>
             </div>
           ))}

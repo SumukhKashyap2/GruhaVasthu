@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import { FaEnvelope } from "react-icons/fa";
 import {
   FaMapMarkerAlt,
   FaHome,
@@ -107,8 +108,20 @@ function DescriptiveReview({ review }) {
         {review.text}
         <span className="text-3xl text-blue-300 ml-2">”</span>
       </p>
-      <div className="text-center">
-        <span className="text-blue-900 font-bold text-lg">{review.client}</span>
+      <div className="text-center flex flex-col items-center gap-1">
+        <span className="text-blue-900 font-bold text-lg flex items-center gap-2 justify-center">
+          {review.client}
+
+          {review.email && (
+            <a
+              href={`mailto:${review.email}`}
+              title={`Email ${review.client} to learn about their experience with the project`}
+              aria-label={`Email ${review.client}`}
+            >
+              <FaEnvelope className="text-blue-500 hover:text-blue-700 transition" />
+            </a>
+          )}
+        </span>
         <span className="block text-gray-500 text-sm">{review.location}</span>
       </div>
     </div>

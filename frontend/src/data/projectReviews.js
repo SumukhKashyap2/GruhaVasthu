@@ -3,7 +3,8 @@ const projectReviews = {
     {
       text: "Excellent service and quality!",
       client: "Mr.Manjunath",
-      location: "RBI Layout"
+      location: "RBI Layout",
+      email: "manjunath.rbi@example.com"
     }
   ],
   3: [
@@ -17,7 +18,8 @@ const projectReviews = {
     {
       text: "Loved the Vasthu compliance!",
       client: "Mr.Srinath Nagaraj",
-      location: "Kondenahalli"
+      location: "Kondenahalli",
+      email: "srinath.kondenahalli@example.com"
     }
   ]
 };

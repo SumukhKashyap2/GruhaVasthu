@@ -26,7 +26,7 @@ export default function FunFactBubble() {
           "
           aria-label="Did you know?"
         >
-         🤔
+         💭
         </button>
 
         {/* Popover */}

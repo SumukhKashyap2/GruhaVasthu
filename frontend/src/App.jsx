@@ -113,16 +113,23 @@ function Footer() {
               Karnataka, India
             </span>
           </div>
-          <div className="mt-2 flex flex-col gap-1">
-            <span className="flex items-center gap-2">
-              <FaWhatsapp className="text-green-500" />
-              +91 88610 95921
-            </span>
-            <span className="flex items-center gap-2">
-              <SiGmail className="text-red-500" />
-              vasthugruha2002@gmail.com
-            </span>
-          </div>
+            <div className="mt-2 flex flex-col gap-2 text-base">
+              <a
+                href="tel:+918861095921"
+                className="flex items-center gap-2 hover:underline"
+              >
+                <FaWhatsapp className="text-green-500" />
+                WhatsApp Us
+              </a>
+
+              <a
+                href="mailto:vasthugruha2002@gmail.com"
+                className="flex items-center gap-2 hover:underline"
+              >
+                <SiGmail className="text-red-500" />
+                Email Us
+              </a>
+            </div>
         </div>
       </div>
 
