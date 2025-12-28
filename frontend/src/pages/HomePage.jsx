@@ -115,7 +115,7 @@ export default function HomePage() {
       </section>
 
 {/* ================= HOW WE WORK ================= */}
-<section className="relative py-32 bg-gradient-to-br from-white via-blue-50 to-orange-50 overflow-hidden">
+<section className="relative py-20 md:py-32 bg-gradient-to-br from-white via-blue-50 to-orange-50 overflow-hidden">
   <div className="max-w-7xl mx-auto px-6 relative">
 
     {/* Header */}
@@ -160,7 +160,19 @@ export default function HomePage() {
     />
 
     {/* CENTER CARDS */}
-    <div className="flex justify-center gap-12 relative z-10">
+           <div
+          className="
+            flex
+            flex-col
+            items-center
+            gap-10
+            md:flex-row
+            md:justify-center
+            md:gap-12
+            relative
+            z-10
+          "
+        >
       <ProcessCard
         step="01"
         title="Plan"
