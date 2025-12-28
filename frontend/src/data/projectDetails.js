@@ -6,7 +6,7 @@ const projectDetails = {
     type: "Residential",
     Vasthu: "Yes",
     year: 2025,
-    overview: "Ocean View is a premium commercial project in RBI Layout, designed for modern businesses. The building features open-plan offices, advanced security, and ample parking.",
+    overview: "This residential project in RBI Layout is thoughtfully designed to meet modern living needs while adhering to Vasthu principles. The home features well-planned spaces, quality construction, and a clean elevation that blends functionality with aesthetics. Emphasis was placed on ventilation, natural light, and long-term durability, making it a comfortable and reliable home for everyday living.",
     images: [
       "/images/rbi/RBI_ELEVATION.png",
     ],
@@ -19,7 +19,7 @@ const projectDetails = {
     type: "Residential",
     Vasthu: "Yes",
     year: 2025,
-    overview: "Rajajinagara is a tranquil residential project in ITI Layout, inspired by nature. The homes offer panoramic views and peaceful surroundings.",
+    overview: "Located in the well-established Rajajinagara locality, this residential project is designed for spacious and comfortable family living. The house features a practical layout with attention to structural strength, natural lighting, and ventilation. Built with quality materials and Vasthu compliance, the project reflects a balance of modern design and functional planning.",
     images: [
       "/images/Rajajinagara/Elevation.jpeg"
     ],
@@ -32,7 +32,7 @@ const projectDetails = {
     type: "Residential",
     Vasthu: "Yes",
     year: 2023,
-    overview: "Saaligraama is a landmark residential project in Konankunte, designed to blend modern architecture with Vasthu principles. The project features spacious apartments, lush landscaping, and premium amenities for families seeking comfort and convenience.",
+    overview: "Saaligraama is a premium residential project in Konankunte that combines contemporary architectural design with traditional Vasthu principles. The home offers spacious interiors, efficient space utilization, and a calm residential environment. Designed for long-term comfort, the project focuses on quality workmanship, durability, and thoughtful detailing throughout the construction.",
     images: [
       "/images/Konankunte/Konankunte_elevation.png"
     ],
@@ -45,7 +45,7 @@ const projectDetails = {
     type: "Residential",
     Vasthu: "Yes",
     year: 2013,
-    overview: "Green Valley is a serene residential enclave in Jayanagara, offering eco-friendly homes with contemporary design. The project emphasizes natural light, ventilation, and green spaces.",
+    overview: "This project involved the remodelling of an existing residential structure in the rural village of Kondenahalli, Chikkaballapura district. The primary objective was to transform the old building into a modern, functional home while retaining structural safety and Vasthu compliance. Special emphasis was placed on creating spacious interior areas, improving overall safety, and enhancing natural light through innovative rooftop brick-glass lighting. The result is a refreshed, contemporary living space that blends modern design with the character of a rural setting.",
     images: [
       "/images/Kondenahalli/KondenahalliElevation.jpg"
     ],

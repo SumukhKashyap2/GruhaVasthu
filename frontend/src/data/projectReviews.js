@@ -3,13 +3,12 @@ const projectReviews = {
     {
       text: "Excellent service and quality!",
       client: "Mr.Manjunath",
-      location: "RBI Layout",
-      email: "manjunath.rbi@example.com"
+      location: "RBI Layout"
     }
   ],
   3: [
     {
-      text: "Gruha Vasthu is a leading construction company in Bengaluru, delivering residential and commercial projects with precision, trust, and innovation for over 25 years. Our commitment to quality and vasthu compliance sets us apart.",
+      text: "Totally Satisfied with the quality and work",
       client: "Mr.Prashanth",
       location: "Konankunte"
     }
@@ -19,7 +18,6 @@ const projectReviews = {
       text: "Loved the Vasthu compliance!",
       client: "Mr.Srinath Nagaraj",
       location: "Kondenahalli",
-      email: "srinath.kondenahalli@example.com"
     }
   ]
 };

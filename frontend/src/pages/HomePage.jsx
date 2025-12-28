@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <div>
       {/* ================= HERO ================= */}
-      <section className="relative overflow-hidden pt-32 pb-24">
+      <section className="relative overflow-x-hidden pt-32 pb-24">
         {/* Soft glow */}
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-blue-200/30 rounded-full blur-3xl" />
         <div className="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-orange-200/30 rounded-full blur-3xl" />
