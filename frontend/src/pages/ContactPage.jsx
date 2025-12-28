@@ -1,4 +1,7 @@
-import { FaPhone, FaEnvelope, FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import { MdPhone } from "react-icons/md";
+
 
 export default function ContactPage() {
   return (
@@ -60,10 +63,10 @@ export default function ContactPage() {
           </span>
           <div className="flex flex-col gap-2 text-blue-800 font-semibold text-lg w-full items-center">
             <span className="flex items-center gap-2">
-              <FaPhone className="text-blue-600" /> +91 79752 59383
+              <MdPhone className="text-blue-600" /> +91 79752 59383
             </span>
             <span className="flex items-center gap-2">
-              <FaEnvelope className="text-blue-600" /> vasthugruha2002@gmail.com
+              <SiGmail className="text-red-500" /> vasthugruha2002@gmail.com
             </span>
           </div>
         </div>

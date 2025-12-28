@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-email/components": "1.0.2",
+    "@react-email/img": "0.0.11",
     "axios": "^1.12.2",
     "framer-motion": "^12.23.26",
     "react": "^19.1.1",

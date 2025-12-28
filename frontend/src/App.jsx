@@ -4,7 +4,8 @@ import ProjectDetails from "./pages/ProjectDetails";
 import ContactPage from "./pages/ContactPage";
 import Navbar from "./components/Navbar";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt,FaWhatsapp,FaYoutube} from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 import ScrollToTop from "./components/ScrollToTop"; 
 import ProjectsPage from "./pages/ProjectsPage";
 import ProjectPhotos from "./pages/ProjectPhotos"; 
@@ -75,10 +76,10 @@ function Footer() {
         <div className="md:col-span-2">
           <h3 className="text-xl font-bold text-blue-900 mb-2">About Gruha Vasthu</h3>
           <p className="text-base mb-4">
-            Gruha Vasthu is a leading construction company in Bangalore, delivering residential and commercial projects with precision, trust, and innovation for over 25 years. Our commitment to quality and vasthu compliance sets us apart.
+            Gruha Vasthu is a leading construction company in Bengaluru, delivering residential and commercial projects with precision, trust, and innovation for over 25 years. Our commitment to quality and vasthu compliance sets us apart.
           </p>
           <div className="flex gap-4 mt-2">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            {/* <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebookF className="text-blue-600 hover:text-blue-800 text-xl transition" />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -86,6 +87,9 @@ function Footer() {
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedinIn className="text-blue-700 hover:text-blue-900 text-xl transition" />
+            </a> */}
+            <a href="https://www.youtube.com/@GruhaVasthu" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+              <FaYoutube className="text-red-600 hover:text-red-800 text-xl transition" />
             </a>
           </div>
         </div>
@@ -108,13 +112,19 @@ function Footer() {
             <FaMapMarkerAlt className="text-blue-600 mt-1" />
             <span>
               Rajajinagara,<br /> 
-              Bangalore - 560010<br/>
+              Bengaluru - 560010<br/>
               Karnataka, India<br/>
             </span>
           </div>
-          <div className="mt-2 text-base">
-            <span className="font-semibold">Phone:</span> +91 88610 95921<br />
-            <span className="font-semibold">Email:</span>vasthugruha2002@gmail.com
+          <div className="mt-2 text-base flex flex-col gap-1">
+            <span className="flex items-center gap-2">
+              <FaWhatsapp className="text-green-500" />
+              +91 88610 95921
+            </span>
+            <span className="flex items-center gap-2">
+              <SiGmail className="text-red-500" />
+              vasthugruha2002@gmail.com
+            </span>
           </div>
         </div>
       </div>

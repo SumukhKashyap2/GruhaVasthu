@@ -1,37 +1,7 @@
-// import React from "react";
-// import ProjectCard from "../components/ProjectCard";
-
-// const projects = [
-//   { id: 1, name: "Konankunte", location: "Konankunte", previewImage: "/images/skyline.jpg" },
-//   { id: 2, name: "Jayanagara", location: "Jayanagara", previewImage: "/images/greenvalley.jpg" },
-//   { id: 3, name: "RBI Layout", location: "RBI Layout", previewImage: "/images/oceanview.jpg" },
-//   { id: 4, name: "ITI Layout", location: "ITI Layout", previewImage: "/images/citylights.jpg" },
-// ];
-
-// export default function ProjectsPage() {
-//   return (
-//     <div className="container mx-auto px-4 py-16">
-//       <h1 className="text-4xl font-bold text-blue-900 mb-8 text-center">All Projects</h1>
-//       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-//         {projects.map(project => (
-//           <ProjectCard key={project.id} project={project} />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import { FaBuilding, FaMapMarkedAlt, FaCheckCircle } from "react-icons/fa";
-
-const projects = [
-  { id: 1, name: "RBI Layout", location: "RBI Layout", previewImage: "/images/rbi/RBI_ELEVATION.png" },
-  { id: 2, name: "Rajajinagara", location: "Bengaluru", previewImage: "/images/Rajajinagara/Elevation.jpeg" },  
-  { id: 3, name: "Saaligraama", location: "Konankunte", previewImage: "/images/Konankunte/Konankunte_elevation.png" },
-  { id: 4, name: "Kondenahalli", location: "Chikkaballapura", previewImage: "/images/Kondenahalli/KondenahalliElevation.jpg" },
-
-];
+import projects from "../data/projects";
 
 export default function ProjectsPage() {
   return (
@@ -49,8 +19,8 @@ export default function ProjectsPage() {
       {/* Stats */}
       <section className="bg-white/80 backdrop-blur-lg py-12 mt-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <Stat icon={<FaBuilding />} label="120+ Projects Completed" />
-          <Stat icon={<FaMapMarkedAlt />} label="Across Bangalore" />
+          <Stat icon={<FaBuilding />} label="60+ Projects Completed" />
+          <Stat icon={<FaMapMarkedAlt />} label="Across Bengaluru" />
           <Stat icon={<FaCheckCircle />} label="100% Client Satisfaction" />
         </div>
       </section>

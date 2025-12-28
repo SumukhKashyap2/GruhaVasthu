@@ -3,26 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
 import ReviewBanner from "../components/ReviewBanner";
 import { FaHammer, FaHome, FaClock, FaCompass } from "react-icons/fa";
-
-/* ---------------- DATA ---------------- */
-
-const projects = [
-  { id: 1, name: "RBI Layout", location: "RBI Layout", previewImage: "/images/rbi/RBI_ELEVATION.png" },
-  { id: 2, name: "Rajajinagara", location: "Bengaluru", previewImage: "/images/Rajajinagara/Elevation.jpeg" },
-  { id: 3, name: "Saaligraama", location: "Konankunte", previewImage: "/images/Konankunte/Konankunte_elevation.png" },
-  { id: 4, name: "Kondenahalli", location: "Chikkaballapura", previewImage: "/images/Kondenahalli/KondenahalliElevation.jpg" },
-];
-
-const reviews = [
-  { projectImage: "/images/skyline.jpg", text: "Excellent service and quality!", client: "Priya S.", location: "Bangalore" },
-  { projectImage: "/images/greenvalley.jpg", text: "On-time delivery and great support.", client: "Rahul K.", location: "Jayanagara" },
-  { projectImage: "/images/oceanview.jpg", text: "Highly recommend Gruha Vasthu!", client: "Anjali M.", location: "RBI Layout" },
-  { projectImage: "/images/citylights.jpg", text: "Professional and transparent process.", client: "Suresh R.", location: "ITI Layout" },
-  { projectImage: "/images/skyline2.jpg", text: "Great attention to detail!", client: "Meena T.", location: "JP Nagar" },
-  { projectImage: "/images/greenvalley2.jpg", text: "Would recommend to anyone.", client: "Vikram P.", location: "Banashankari" }
-];
-
-/* ---------------- PAGE ---------------- */
+import projects from "../data/projects";
+import reviews from "../data/reviews";
 
 export default function HomePage() {
   const projectsRef = useRef(null);
@@ -111,7 +93,7 @@ export default function HomePage() {
           <div className="text-center mb-14">
             <h2 className="text-4xl font-extrabold mb-4">Our Projects</h2>
             <p className="text-gray-600">
-              Residential & Commercial excellence across Bangalore
+              Residential & Commercial excellence across Bengaluru
             </p>
           </div>
 
@@ -132,7 +114,6 @@ export default function HomePage() {
         </div>
       </section>
 
-{/* ================= HOW WE WORK ================= */}
 {/* ================= HOW WE WORK ================= */}
 <section className="relative py-32 bg-gradient-to-br from-white via-blue-50 to-orange-50 overflow-hidden">
   <div className="max-w-7xl mx-auto px-6 relative">
