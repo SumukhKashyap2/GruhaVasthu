@@ -71,6 +71,12 @@ const projectPhotoDetails = {
       "/images/Kondenahalli/Kondenahalli_after_construction.png",
       "/images/Kondenahalli/KondenahalliRoof.jpeg",
     ]
+  },
+  5: {
+    title: "Bhoo Varaha",
+    images: [
+      "/images/Chamarajpete/Chamarajpete.png",
+    ]
   }
 };
 

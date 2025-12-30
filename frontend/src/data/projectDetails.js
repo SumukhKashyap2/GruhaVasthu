@@ -50,7 +50,21 @@ const projectDetails = {
       "/images/Kondenahalli/KondenahalliElevation.jpg"
     ],
     videoUrl: ""
+  },
+   5: {
+    title: "Bhoo Varaha",
+    location: "Chamrajpete",
+    area: "2200 sq.ft.",
+    type: "Residential",
+    Vasthu: "Yes",
+    year: 2019,
+    overview: "This residential project on a compact 20 x 30 ft site in Chamrajpete is designed to maximize space efficiency while embracing a modern architectural style. Special attention was given to the client's requirements. The design incorporates contemporary finishes, smart storage solutions, and energy-efficient features, ensuring both aesthetic appeal and long-term practicality. The result is a functional residence that reflects the client's vision and supports modern urban living.",
+    images: [
+      "/images/Chamarajpete/Chamarajpete.png"
+    ],
+    videoUrl: ""
   }
+
 };
 
 export default projectDetails;

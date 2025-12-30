@@ -133,7 +133,7 @@ function ProjectDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = projectDetails[id];
-  const review = projectReviews[id]?.[0];
+  const reviews = projectReviews[id] || [];
 
   if (!project) {
     return <p className="text-center mt-10 text-red-600">Project not found</p>;
@@ -224,13 +224,17 @@ function ProjectDetails() {
           </button>
         </div>
 
-        {review && (
+        {reviews.length > 0 && (
           <>
             <SectionDivider />
             <h2 className="text-3xl font-bold text-blue-900 text-center mb-10">
               What Our Client Says
             </h2>
-            <DescriptiveReview review={review} />
+            <div className="flex flex-col gap-10">
+              {reviews.map((review, idx) => (
+                <DescriptiveReview key={idx} review={review} />
+              ))}
+            </div>
           </>
         )}
       </div>
