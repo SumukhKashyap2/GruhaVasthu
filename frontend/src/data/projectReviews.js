@@ -24,12 +24,12 @@ const projectReviews = {
     {
       text: "I have known Mr. Madhusudhan for the last 8 years, and he is known for his honesty. He was our architect and civil engineer for our newly constructed house in Chamarajpet. The quality of the work, the materials he procured, and the finishing have been extraordinary. We are fully satisfied with the work and highly recommend him.",
       client: "Mr.Prasanna",
-      location: "Kondenahalli",
+      location: "Chamrajpete,Bengaluru",
     },
     {
       text: "Flexible for our needs.. used quality items and importantly finished on time within our budget", 
       client: "Mr.Sathish", 
-      location: "Bengaluru",
+      location: "Chamrajpete,Bengaluru",
     }
   ],
 };
