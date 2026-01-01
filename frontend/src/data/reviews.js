@@ -4,7 +4,7 @@ const reviews = [
   { text: "Excellent cooperation and adherence to engineering quality requirements. 👍", client: "Manjunath", location: "RBI Layout", stars: 5  },
   { text: "Impeccable workmanship and a seamless process resulted in a stunning home that exceeded our expectations.", client: "Venkatesh Murthy", location: "Hoskote", stars: 5 },
   { text: "Gruha Vasthu's stunning turnkey projects and Vasthu-compliant homes reflect their commitment to quality and excellence!", client: "D Vasudev Murthy", location: "Dwaraganahalli", stars: 5 },
-  { text: "Loved the Vasthu compliance! I Would recommend to anyone.", client: "Mr.Srinath Nagaraj", location: "Kondenahalli", stars: 5 }
+  { text: "After researching several builders in the area, we chose Vastu Gruha for our forever home, and we couldn't be happier with the results. Their commitment to architectural integrity and Vastu principles was evident from our first meeting. The construction quality is top-tier. Throughout the process, the team was transparent about timelines and costs, ensuring there were no surprises. We finally have a home that feels both peaceful and of incredibly high quality. Madhusudhan K., thank you! Your commitment and dedication are much appreciated. Keep going 😊", client: "Mr.Srinath Nagaraj", location: "Kondenahalli", stars: 5 }
 ];
 
 export default reviews;
