@@ -36,7 +36,7 @@ const projectDetails = {
     images: [
       "/images/Konankunte/Konankunte_elevation.png"
     ],
-    videoUrl: ""
+    videoUrl: "https://youtu.be/CyrQyCMpCN8?si=l6LxIRvOgxwnfE9A"
   },
   4: {
     title: "Kondenahalli",
